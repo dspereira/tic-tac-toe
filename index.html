@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Jogo do Galo</title>
+    <style>
+        
+        body{
+            width: 700px;
+            background-color: #f2f2f2;
+            margin:auto;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        h1,h2,h3,p{
+           text-align: center; 
+        }
+        .button_difilcuty{
+            text-align: center;   
+        }
+        button{
+            background-color: skyblue;
+        }
+        
+        table{
+           margin:auto;
+        }
+        table tr{
+            width: 100px;
+            height: 100px;
+        }
+        table, td{
+            border-collapse: collapse;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+            margin: 0px;
+            padding: 0px;
+        }
+        .border_v{
+            border-left: 3px solid black;
+            border-right: 3px solid black;
+            border: collapse;    
+        }
+        .border_h{
+           border-top: 3px solid black;
+           border-bottom: 3px solid black;
+            border: collapse;
+        }
+        
+        
+    </style>
+    <script src="javascript/game_script.js"></script>
+    
+</head>
+<body>
+    <main>
+    <h1>Jogo Galo</h1>
+    <h2 id="dificulty">Difícil</h2>
+    <div class="button_difilcuty">
+        <button type="button" onclick="">Fácil</button>
+        <button type="button" onclick="">Difícil</button>
+        <br><br>
+    </div>
+        
+    <table>
+    <tr>
+        <td><img src="" onclick="player_vs_pc(this)" id="0-0"></td>
+        <td class="border_v"><img src="" onclick="player_vs_pc(this)" id="0-1"></td>
+        <td><img src="" onclick="player_vs_pc_easy(this)" id="0-2"></td>
+    </tr>
+    <tr>
+        <td class="border_h"><img src="" onclick="player_vs_pc(this)" id="1-0"></td>
+        <td class="border_v border_h"><img src="" onclick="player_vs_pc(this)" id="1-1"></td>
+        <td class="border_h"><img src="" onclick="player_vs_pc(this)" id="1-2"></td>
+    </tr>
+    <tr>
+        <td><img src="" onclick="player_vs_pc(this)" id="2-0"></td>
+        <td class="border_v"><img src="" onclick="player_vs_pc(this)" id="2-1"></td>
+        <td><img src="" onclick="player_vs_pc(this)" id="2-2"></td>
+    </tr>   
+    </table>
+
+    <h1 id="result">Resultado</h1>
+    <p><b>Player: <span id="player_num">0</span> &nbsp;&nbsp;vs &nbsp;&nbsp;PC: <span id="pc_num">0</span></b></p>
+    <p><b>Empate: <span id="tie_num">0</span></b></p>
+           
+    <p>Tabuleiro de Debug</p>
+    <p id="debug">Tabuleiro</p>  
+    <button type="button" onclick='document.getElementById("debug").innerHTML=table[0]+"<br>"+table[1]+"<br>"+table[2]'>Click Me!</button>
+    </main>
+</body>
+</html>
